@@ -32,7 +32,6 @@ UsePAM no
 
 
 # Miscellanious
-UsePrivilegeSeparation sandbox		# macOS only
 AcceptEnv LANG LC_*
 Subsystem sftp /usr/libexec/sftp-server
 XAuthLocation /opt/X11/bin/xauth
