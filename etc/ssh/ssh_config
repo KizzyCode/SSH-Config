@@ -1,0 +1,19 @@
+# Apple:
+Host *
+	SendEnv LANG LC_*
+	UseKeychain yes
+	AddKeysToAgent yes
+
+
+# Ciphers and keying
+RekeyLimit 32G none
+VerifyHostKeyDNS ask
+
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes256-ctr
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-512
+KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384
+
+
+# XAuthLocation added by XQuartz (http://xquartz.macosforge.org)
+Host *
+	XAuthLocation /opt/X11/bin/xauth
