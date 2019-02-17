@@ -1,8 +1,6 @@
-# Apple:
-Host *
-	SendEnv LANG LC_*
-	UseKeychain yes
-	AddKeysToAgent yes
+# Network
+ServerAliveInterval 30
+ServerAliveCountMax 120
 
 
 # Ciphers and keying
@@ -14,6 +12,9 @@ MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-512
 KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384
 
 
-# XAuthLocation added by XQuartz (http://xquartz.macosforge.org)
+# Apple and XQuartz specific settings
 Host *
+	SendEnv LANG LC_*
+	UseKeychain yes
+	AddKeysToAgent yes
 	XAuthLocation /opt/X11/bin/xauth
